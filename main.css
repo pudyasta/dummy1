@@ -120,7 +120,7 @@ body {
   transform: translateY(0);
 }
 .sharex p {
-  font-size: 18px;
+  font-size: 15px;
   text-transform: uppercase;
   color: var(--grayis-blue);
 }
@@ -130,7 +130,7 @@ body {
   align-items: center;
 }
 .social img {
-  width: 25px;
+  width: 23px;
 }
 .share-p {
   letter-spacing: 5px;
@@ -154,6 +154,7 @@ body {
     overflow: visible;
   }
   .content-image {
+    border-radius: 10px 0 0 10px;
     flex: 2;
     flex-grow: 2;
   }
