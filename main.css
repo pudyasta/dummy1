@@ -53,7 +53,7 @@ body {
   border-radius: 10px;
   box-shadow: 10px 10px 20px #3030302e;
   overflow: hidden;
-  width: 400px;
+  width: 350px;
 }
 .content-image {
   width: 100%;
@@ -98,13 +98,13 @@ body {
 
 .attribution {
   display: flex;
-  padding: 40px 35px;
+  padding: 40px 25px;
   gap: 30px;
   justify-content: flex-start;
-  min-width: 400px;
+  min-width: 350px;
   position: absolute;
   transform: translateY(200px);
-  left: -335px;
+  left: -285px;
   bottom: -35px;
   background-color: var(--dark-blue);
 }
