@@ -36,11 +36,13 @@ body {
   padding: 25px;
 }
 .content h2 {
-  font-size: 18px;
+  font-size: 20px;
 }
 .p-margin {
   color: var(--grayis-blue);
   margin: 15px 0;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .container {
@@ -50,6 +52,8 @@ body {
   margin: 20px;
   border-radius: 10px;
   box-shadow: 10px 10px 20px #3030302e;
+  overflow: hidden;
+  width: 400px;
 }
 .content-image {
   width: 100%;
@@ -67,6 +71,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 }
 .profile-right {
   gap: 20px;
@@ -87,50 +92,81 @@ body {
   padding: 10px;
   border-radius: 100px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
 }
 
 .attribution {
   display: flex;
-  padding: 10px;
-  justify-content: space-evenly;
-  width: 200px;
+  padding: 40px 35px;
+  gap: 30px;
+  justify-content: flex-start;
+  min-width: 400px;
   position: absolute;
-  scale: 0;
-  transition: 0.5s;
-  top: -50px;
-  left: -80px;
-  transform: translateY(-10px);
+  transform: translateY(200px);
+  left: -335px;
+  bottom: -35px;
   background-color: var(--dark-blue);
-  color: #fff;
-  border-radius: 10px;
 }
 .sharex {
   position: relative;
+  display: flex;
+  flex-direction: column-reverse;
 }
 .sharex:hover .attribution {
   opacity: 1;
   scale: 1;
+  transition: 0.5s;
   transform: translateY(0);
+}
+.sharex p {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: var(--grayis-blue);
+}
+.social {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+.social img {
+  width: 25px;
+}
+.share-p {
+  letter-spacing: 5px;
+}
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid var(--dark-blue);
+  position: absolute;
+  bottom: -10px;
+  left: 130px;
 }
 
 @media (min-width: 1440px) {
   .container {
-    min-height: 30vh;
+    min-height: 40vh;
     flex-direction: row;
-    width: 48vw;
+    width: 60vw;
+    overflow: visible;
   }
   .content-image {
     flex: 2;
     flex-grow: 2;
-    height: 400px;
   }
   .content {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     flex-grow: 3;
     padding: 30px 50px;
+    justify-content: space-evenly;
   }
   .content h2 {
-    font-size: 35px;
+    font-size: 30px;
   }
   .p-margin {
     font-size: 18px;
@@ -138,5 +174,31 @@ body {
   .text h6,
   .text p {
     font-size: 16px;
+  }
+
+  .attribution {
+    padding: 15px 30px;
+    bottom: auto;
+    transition: 0.5s;
+    top: -80px;
+    left: -120px;
+    transform: translateY(50px);
+    background-color: var(--dark-blue);
+    color: #fff;
+    min-width: 100px;
+    scale: 0;
+    border-radius: 10px;
+  }
+  .sharex:hover .attribution {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .sharex p {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: var(--grayis-blue);
+  }
+  .social img {
+    width: 20px;
   }
 }
